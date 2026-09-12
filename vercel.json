@@ -1,0 +1,3 @@
+{
+  "installCommand": "cat .lock-parts/*.part > package-lock.json && npm ci"
+}
