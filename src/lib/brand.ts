@@ -10,15 +10,15 @@ export const brand = {
   fullAddress: "37902 Rieth Road, Echo OR 97826",
 };
 
-/** Photography from horseshoecurveoutdoors.com (Squarespace site assets). */
+/** Every photo below is scraped from horseshoecurveoutdoors.com (site id 63dad109de284f2cc8483507). */
 export const imageCredit =
   "Photos from horseshoecurveoutdoors.com (site assets).";
 
 export const images = {
   hero: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/b8152293-365f-41ff-b9dd-2f664904adbc/HOME_DJI_0426-2048x1365.jpg?format=1500w",
   river: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/14c16904-1f25-40f0-ae3c-4ca6b2a6c7e5/WATERFOWL_DJI_0372-2048x1365.jpg?format=1500w",
-  farmland: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/47a442ba-685c-4415-8fe4-d96105051f9f/horseshoecurvehuntclub17_deer-hunting.jpg?format=1500w",
-  lodge: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/92598e2f-781f-4433-8c23-07981d8f098f/horseshoecurvehuntclublodge2_16.jpg?format=1500w",
+  farmland: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/4400797b-5a7f-4618-9739-6ffb0cb85dd2/DEER-HUNTING_IMG_5473-2048x1536.jpg?format=1500w",
+  lodge: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/56c50ad2-75d5-472c-92d4-a390219e87ad/horseshoecurvehuntclublodge2_22.jpg?format=1500w",
   dogs: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11d4f9d6-ed1b-4408-81f4-50ceebf86de1/BROCHURE+DOG.jpg?format=1500w",
   fire: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/02c22b64-dc0d-4239-a365-d5de084ca3f7/IMG_5422-1536x2048.jpg?format=1500w",
   cta: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/12e7fdc1-4e31-4438-9b90-6d5c4b2da9e1/CONTACT-US_DJI_0659-2048x1365.jpg?format=1500w",
@@ -54,12 +54,12 @@ export const images = {
       category: "hunts" as const,
     },
     {
-      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/1705961636444-NNX6IHDB5JMWETBZZB6D/image-asset.jpeg?format=1500w",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/2247ab68-5534-4fa8-9605-116e012887e4/IMG_9807.jpg?format=1500w",
       alt: "Horseshoe Curve hunt party",
       category: "hunts" as const,
     },
     {
-      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/2247ab68-5534-4fa8-9605-116e012887e4/IMG_9807.jpg?format=1500w",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/347a8e4f-005b-45fb-b66b-3d42321e959d/photo-3.jpg?format=1500w",
       alt: "Birds in hand after the flush",
       category: "hunts" as const,
     },
