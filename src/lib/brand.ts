@@ -10,78 +10,127 @@ export const brand = {
   fullAddress: "37902 Rieth Road, Echo OR 97826",
 };
 
+/** Photography from horseshoecurveoutdoors.com (Squarespace site assets). */
+export const imageCredit =
+  "Photos from horseshoecurveoutdoors.com (site assets).";
+
 export const images = {
-  hero:
-    "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2400&q=80",
-  river:
-    "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1600&q=80",
-  farmland:
-    "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
-  lodge:
-    "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&q=80",
-  dogs:
-    "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1600&q=80",
-  fire:
-    "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1600&q=80",
+  hero: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/b8152293-365f-41ff-b9dd-2f664904adbc/HOME_DJI_0426-2048x1365.jpg?format=1500w",
+  river: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/14c16904-1f25-40f0-ae3c-4ca6b2a6c7e5/WATERFOWL_DJI_0372-2048x1365.jpg?format=1500w",
+  farmland: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/47a442ba-685c-4415-8fe4-d96105051f9f/horseshoecurvehuntclub17_deer-hunting.jpg?format=1500w",
+  lodge: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/92598e2f-781f-4433-8c23-07981d8f098f/horseshoecurvehuntclublodge2_16.jpg?format=1500w",
+  dogs: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11d4f9d6-ed1b-4408-81f4-50ceebf86de1/BROCHURE+DOG.jpg?format=1500w",
+  fire: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/02c22b64-dc0d-4239-a365-d5de084ca3f7/IMG_5422-1536x2048.jpg?format=1500w",
+  cta: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/12e7fdc1-4e31-4438-9b90-6d5c4b2da9e1/CONTACT-US_DJI_0659-2048x1365.jpg?format=1500w",
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-      alt: "Morning mist over Eastern Oregon hills",
-      category: "land" as const,
-    },
-    {
-      src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      alt: "Wide open farm country under big sky",
-      category: "land" as const,
-    },
-    {
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
-      alt: "Rugged ridge above the river corridor",
-      category: "land" as const,
-    },
-    {
-      src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
-      alt: "Planted and wild cover for upland birds",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/0251d543-0b31-459b-822f-a738050ddfd1/photo-1.jpg?format=1500w",
+      alt: "Upland birds and dogs in the cover",
       category: "hunts" as const,
     },
     {
-      src: "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80",
-      alt: "Timber edge along cultivated ground",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/08ed003c-1611-4bb2-af19-12c898282d16/IMG_4636.JPG?format=1500w",
+      alt: "Hunters walking Eastern Oregon cover",
       category: "hunts" as const,
     },
     {
-      src: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1200&q=80",
-      alt: "End-of-day fire pit stories",
-      category: "lodging" as const,
-    },
-    {
-      src: "https://images.unsplash.com/photo-1510798831973-ccd433fc5e75?auto=format&fit=crop&w=1200&q=80",
-      alt: "Cozy lodge evening light",
-      category: "lodging" as const,
-    },
-    {
-      src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
-      alt: "Well-appointed lodge suite",
-      category: "lodging" as const,
-    },
-    {
-      src: "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=80",
-      alt: "Working dog ready for the field",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/0965ba13-e397-4474-ac25-9f0537fa997f/FullSizeRender.jpeg?format=1500w",
+      alt: "A successful day afield",
       category: "hunts" as const,
     },
     {
-      src: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
-      alt: "Umatilla River corridor",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/0dd6a446-50ce-4b4b-b4ea-eef12c30c0ab/photo.jpg?format=1500w",
+      alt: "Bird hunting along the property",
+      category: "hunts" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11aeec3a-7f1e-4896-9f70-ba31f2541f5d/IMG_6137-1536x2048.jpg?format=1500w",
+      alt: "Guided hunt in the field",
+      category: "hunts" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11d4f9d6-ed1b-4408-81f4-50ceebf86de1/BROCHURE+DOG.jpg?format=1500w",
+      alt: "Working dog ready for the hunt",
+      category: "hunts" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/1705961636444-NNX6IHDB5JMWETBZZB6D/image-asset.jpeg?format=1500w",
+      alt: "Horseshoe Curve hunt party",
+      category: "hunts" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/2247ab68-5534-4fa8-9605-116e012887e4/IMG_9807.jpg?format=1500w",
+      alt: "Birds in hand after the flush",
+      category: "hunts" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/12e7fdc1-4e31-4438-9b90-6d5c4b2da9e1/CONTACT-US_DJI_0659-2048x1365.jpg?format=1500w",
+      alt: "Aerial view over the river corridor",
       category: "land" as const,
     },
     {
-      src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
-      alt: "Golden farmland at dusk",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/14c16904-1f25-40f0-ae3c-4ca6b2a6c7e5/WATERFOWL_DJI_0372-2048x1365.jpg?format=1500w",
+      alt: "Property retreats and open country",
       category: "land" as const,
     },
     {
-      src: "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=1200&q=80",
-      alt: "Cabin porch overlooking the property",
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/1505de2f-1bad-451a-8807-a0cfb0cfdc19/RETREATS_DJI_0354-2048x1365.jpg?format=1500w",
+      alt: "Aerial look at cultivated and wild cover",
+      category: "land" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/3cf32230-a8a0-48d5-a2ba-518ebcc7289e/DJI_0341-2048x1365.jpg?format=1500w",
+      alt: "Open farmland on the lodge property",
+      category: "land" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/40785260-e223-41b0-8992-670fccb99c59/IMG_5278.jpeg?format=1500w",
+      alt: "Deer country along the curve",
+      category: "land" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/42d5724e-5ef2-44fc-8b74-80eb89c7922a/horseshoecurvehuntclub9.jpg?format=1500w",
+      alt: "Horseshoe Curve hunt club grounds",
+      category: "land" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/47a442ba-685c-4415-8fe4-d96105051f9f/horseshoecurvehuntclub17_deer-hunting.jpg?format=1500w",
+      alt: "Wide view of the property from above",
+      category: "land" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/02c22b64-dc0d-4239-a365-d5de084ca3f7/IMG_5422-1536x2048.jpg?format=1500w",
+      alt: "Horseshoe Curve hunt club lodge",
+      category: "lodging" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/10cb4fb1-a762-4b95-931e-131e2888d8c4/IMG_5121-2048x1536.jpg?format=1500w",
+      alt: "Lodge interior hospitality",
+      category: "lodging" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/19afa9ab-ba22-4bdd-bce0-91ad56c052b5/IMG_5035-2048x1536.jpg?format=1500w",
+      alt: "Comfortable lodge living space",
+      category: "lodging" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/1d1d255e-d425-4c10-ad6a-a22db292a734/IMG_5206-2048x1536.jpg?format=1500w",
+      alt: "Well-appointed lodge room",
+      category: "lodging" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/255740a2-b8f5-4dd6-8c5b-181b45f01c68/IMG_5506-2048x1536.jpg?format=1500w",
+      alt: "Lodge dining and gathering space",
+      category: "lodging" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/3593534d-091d-4289-b922-2f031f464d61/IMG_5539-2048x1536.jpg?format=1500w",
+      alt: "Evening lodging at the property",
+      category: "lodging" as const,
+    },
+    {
+      src: "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/39840cb6-2d44-4c83-9b0c-d63626dab600/IMG_5066-2048x1536.jpg?format=1500w",
+      alt: "Lodge atmosphere after the hunt",
       category: "lodging" as const,
     },
   ],

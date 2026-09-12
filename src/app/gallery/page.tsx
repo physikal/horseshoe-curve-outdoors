@@ -33,7 +33,8 @@ export default function GalleryPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--brand-ink)]/75">
           A look at the cover, the country, and the lodges that make Horseshoe
-          Curve Outdoors a place hunters come back to.
+          Curve Outdoors a place hunters come back to. Photos from
+          horseshoecurveoutdoors.com.
         </p>
         <div className="mt-8 flex flex-wrap gap-2">
           {filters.map((f) => (
