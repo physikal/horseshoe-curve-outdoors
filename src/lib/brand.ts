@@ -8,6 +8,8 @@ export const brand = {
   address: "37902 Rieth Road",
   cityStateZip: "Echo, OR 97826",
   fullAddress: "37902 Rieth Road, Echo OR 97826",
+  facebookUrl: "https://www.facebook.com/horseshoecurveoutdoor",
+  instagramUrl: "https://www.instagram.com/horseshoecurvehuntclub/",
 };
 
 /** Every photo below is scraped from horseshoecurveoutdoors.com (site id 63dad109de284f2cc8483507). */
