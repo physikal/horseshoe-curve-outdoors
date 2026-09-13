@@ -222,12 +222,26 @@ export async function updateSlot(
   const store = await ensureStore();
   const idx = store.slots.findIndex((s) => s.id === id);
   if (idx < 0) return null;
+  if (patch.huntId) {
+    const hunt = store.hunts.find((h) => h.id === patch.huntId);
+    if (!hunt || hunt.status === "cancelled") {
+      throw new Error("Hunt not found or cancelled");
+    }
+  }
   let updated: Slot = {
     ...store.slots[idx],
     ...patch,
     id,
     updatedAt: new Date().toISOString(),
   };
+  if (updated.endAt <= updated.startAt) {
+    throw new Error("endAt must be after startAt");
+  }
+  if (updated.capacity < updated.bookedCount) {
+    throw new Error(
+      `Capacity cannot be below booked guests (${updated.bookedCount})`,
+    );
+  }
   updated = syncSlotStatus(updated);
   store.slots[idx] = updated;
   await persist(store);
