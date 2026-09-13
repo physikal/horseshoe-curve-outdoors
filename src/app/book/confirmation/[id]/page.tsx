@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/button-link";
 import { getBooking } from "@/lib/db";
+import { formatUsd } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +14,8 @@ export default async function ConfirmationPage({
   const { id } = await params;
   const booking = await getBooking(id);
   if (!booking || booking.status === "cancelled") notFound();
+
+  const grandTotal = booking.hunt.pricePerGuest * booking.partySize;
 
   return (
     <div className="pt-24">
@@ -47,6 +50,8 @@ export default async function ConfirmationPage({
               <span className="text-[var(--brand-ink)]/55">When</span>
               <br />
               {format(new Date(booking.slot.startAt), "EEEE, MMM d · h:mm a")}
+              {" – "}
+              {format(new Date(booking.slot.endAt), "h:mm a")}
             </p>
             <p>
               <span className="text-[var(--brand-ink)]/55">Guest</span>
@@ -57,6 +62,22 @@ export default async function ConfirmationPage({
               <span className="text-[var(--brand-ink)]/55">Party size</span>
               <br />
               {booking.partySize}
+            </p>
+            <p>
+              <span className="text-[var(--brand-ink)]/55">Price / guest</span>
+              <br />
+              {formatUsd(booking.hunt.pricePerGuest)}
+            </p>
+            <p>
+              <span className="text-[var(--brand-ink)]/55">Total</span>
+              <br />
+              <span className="font-display text-lg text-[var(--brand-forest)]">
+                {formatUsd(grandTotal)}
+              </span>
+              <span className="mt-0.5 block text-xs text-[var(--brand-ink)]/55">
+                {formatUsd(booking.hunt.pricePerGuest)} × {booking.partySize}{" "}
+                guest{booking.partySize === 1 ? "" : "s"}
+              </span>
             </p>
             <p>
               <span className="text-[var(--brand-ink)]/55">Email</span>
