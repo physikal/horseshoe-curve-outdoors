@@ -3,7 +3,7 @@
 import { format } from "date-fns";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import type { SlotWithHunt } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { cn, formatUsd } from "@/lib/utils";
 
 export function BookClient({
   initialSlots,
@@ -26,6 +26,7 @@ export function BookClient({
   const [slots, setSlots] = useState(initialSlots);
   const [error, setError] = useState<string | null>(initialError);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [partySize, setPartySize] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
@@ -34,6 +35,19 @@ export function BookClient({
     () => slots.find((s) => s.id === selectedId) ?? null,
     [slots, selectedId],
   );
+
+  const maxParty = selected
+    ? Math.min(selected.remaining, selected.hunt.maxGuests)
+    : 12;
+
+  useEffect(() => {
+    if (!selected) return;
+    setPartySize((prev) => Math.min(Math.max(1, prev), maxParty));
+  }, [selected, maxParty]);
+
+  const grandTotal = selected
+    ? selected.hunt.pricePerGuest * partySize
+    : 0;
 
   async function refresh() {
     setRefreshing(true);
@@ -58,6 +72,12 @@ export function BookClient({
       setFormError("Select a hunt slot first.");
       return;
     }
+    if (partySize < 1 || partySize > maxParty) {
+      setFormError(
+        `Party size must be between 1 and ${maxParty} for this slot.`,
+      );
+      return;
+    }
     setSubmitting(true);
     setFormError(null);
     const data = new FormData(e.currentTarget);
@@ -70,7 +90,7 @@ export function BookClient({
           guestName: String(data.get("guestName") || ""),
           guestEmail: String(data.get("guestEmail") || ""),
           guestPhone: String(data.get("guestPhone") || ""),
-          partySize: Number(data.get("partySize") || 1),
+          partySize,
           notes: String(data.get("notes") || "") || undefined,
         }),
       });
@@ -93,8 +113,8 @@ export function BookClient({
           Book a hunt
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--brand-ink)]/75">
-          Choose an open slot, tell us who is coming, and get an instant
-          confirmation code for your party.
+          Choose an open slot, set your party size to see your total, and get an
+          instant confirmation for the lodge schedule.
         </p>
 
         {huntFilter ? (
@@ -182,7 +202,7 @@ export function BookClient({
                           : "text-[var(--brand-ink)]/70",
                       )}
                     >
-                      ${slot.hunt.pricePerGuest}/guest · up to{" "}
+                      {formatUsd(slot.hunt.pricePerGuest)}/guest · up to{" "}
                       {slot.hunt.maxGuests} guests
                       {slot.notes ? ` · ${slot.notes}` : ""}
                     </p>
@@ -204,16 +224,12 @@ export function BookClient({
             <h2 className="font-display text-2xl text-[var(--brand-forest-deep)]">
               Guest details
             </h2>
-            {selected ? (
-              <p className="text-sm text-[var(--brand-ink)]/70">
-                Booking: {selected.hunt.title} on{" "}
-                {format(new Date(selected.startAt), "MMM d, yyyy")}
-              </p>
-            ) : (
+            {!selected ? (
               <p className="text-sm text-[var(--brand-ink)]/70">
                 Select a slot to continue.
               </p>
-            )}
+            ) : null}
+
             <div className="space-y-2">
               <Label htmlFor="guestName">Full name</Label>
               <Input id="guestName" name="guestName" required />
@@ -233,15 +249,92 @@ export function BookClient({
                 name="partySize"
                 type="number"
                 min={1}
-                max={selected?.remaining ?? selected?.hunt.maxGuests ?? 12}
-                defaultValue={1}
+                max={maxParty}
+                value={partySize}
+                onChange={(e) => {
+                  const next = Number(e.target.value);
+                  if (Number.isNaN(next)) {
+                    setPartySize(1);
+                    return;
+                  }
+                  setPartySize(Math.min(Math.max(1, next), maxParty));
+                }}
                 required
+                disabled={!selected}
               />
+              {selected ? (
+                <p className="text-xs text-[var(--brand-ink)]/55">
+                  {selected.remaining} spot
+                  {selected.remaining === 1 ? "" : "s"} remaining on this slot
+                  (max {selected.hunt.maxGuests} for this package).
+                </p>
+              ) : null}
             </div>
             <div className="space-y-2">
               <Label htmlFor="notes">Notes (optional)</Label>
               <Textarea id="notes" name="notes" rows={3} />
             </div>
+
+            {selected ? (
+              <div
+                className="space-y-3 border border-[var(--brand-forest)]/15 bg-[var(--brand-cream)]/80 p-4"
+                aria-live="polite"
+              >
+                <p className="text-xs tracking-[0.16em] text-[var(--brand-moss)] uppercase">
+                  Your commitment
+                </p>
+                <dl className="grid gap-2 text-sm">
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-[var(--brand-ink)]/55">Hunt</dt>
+                    <dd className="text-right font-medium text-[var(--brand-forest-deep)]">
+                      {selected.hunt.title}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-[var(--brand-ink)]/55">Date & time</dt>
+                    <dd className="text-right">
+                      {format(
+                        new Date(selected.startAt),
+                        "EEE, MMM d · h:mm a",
+                      )}
+                      {" – "}
+                      {format(new Date(selected.endAt), "h:mm a")}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-[var(--brand-ink)]/55">Price / guest</dt>
+                    <dd className="text-right">
+                      {formatUsd(selected.hunt.pricePerGuest)}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-[var(--brand-ink)]/55">Party size</dt>
+                    <dd className="text-right">{partySize}</dd>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-[var(--brand-ink)]/55">
+                      Capacity remaining
+                    </dt>
+                    <dd className="text-right">
+                      {selected.remaining} of {selected.capacity}
+                    </dd>
+                  </div>
+                  <div className="mt-1 flex justify-between gap-4 border-t border-[var(--brand-forest)]/15 pt-3">
+                    <dt className="font-display text-base text-[var(--brand-forest-deep)]">
+                      Total
+                    </dt>
+                    <dd className="font-display text-xl text-[var(--brand-forest)]">
+                      {formatUsd(grandTotal)}
+                    </dd>
+                  </div>
+                </dl>
+                <p className="text-xs text-[var(--brand-ink)]/55">
+                  {formatUsd(selected.hunt.pricePerGuest)} × {partySize} guest
+                  {partySize === 1 ? "" : "s"}
+                </p>
+              </div>
+            ) : null}
+
             {formError ? (
               <Alert variant="destructive">
                 <AlertTitle>Booking issue</AlertTitle>
@@ -253,7 +346,11 @@ export function BookClient({
               disabled={!selected || submitting}
               className="w-full bg-[var(--brand-gold)] text-[var(--brand-ink)] hover:bg-[var(--brand-gold-bright)]"
             >
-              {submitting ? "Confirming…" : "Confirm booking"}
+              {submitting
+                ? "Confirming…"
+                : selected
+                  ? `Confirm · ${formatUsd(grandTotal)}`
+                  : "Confirm booking"}
             </Button>
           </form>
         </div>
