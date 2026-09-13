@@ -10,6 +10,15 @@ Inspired by [horseshoecurveoutdoors.com](https://horseshoecurveoutdoors.com/).
 - In-memory / local JSON persistence (no cloud DB credentials required)
 - Cookie session auth for admin; Bearer token for agent API
 
+## Vercel Toolbar
+
+Preview deployments should not show the floating Vercel Toolbar circle. Preferred disable:
+
+1. Vercel project → **Settings → General → Vercel Toolbar** → Preview **Off**
+2. Or set Preview env var `VERCEL_PREVIEW_FEEDBACK_ENABLED=0`
+
+The app also sets a CSP that omits `vercel.live` and strips any injected toolbar DOM as a fallback.
+
 ## Run locally
 
 ```bash

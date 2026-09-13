@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Libre_Baskerville, Karla } from "next/font/google";
+import { HideVercelToolbar } from "@/components/hide-vercel-toolbar";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { brand } from "@/lib/brand";
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased">
+        <HideVercelToolbar />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
