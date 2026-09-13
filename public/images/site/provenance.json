@@ -1,0 +1,144 @@
+{
+  "images.hero": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/b8152293-365f-41ff-b9dd-2f664904adbc/HOME_DJI_0426-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.river": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/14c16904-1f25-40f0-ae3c-4ca6b2a6c7e5/WATERFOWL_DJI_0372-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.farmland": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/4400797b-5a7f-4618-9739-6ffb0cb85dd2/DEER-HUNTING_IMG_5473-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.lodge": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/56c50ad2-75d5-472c-92d4-a390219e87ad/horseshoecurvehuntclublodge2_22.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.dogs": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11d4f9d6-ed1b-4408-81f4-50ceebf86de1/BROCHURE+DOG.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.fire": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/02c22b64-dc0d-4239-a365-d5de084ca3f7/IMG_5422-1536x2048.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.cta": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/12e7fdc1-4e31-4438-9b90-6d5c4b2da9e1/CONTACT-US_DJI_0659-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/"
+  },
+  "images.gallery[0] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/0251d543-0b31-459b-822f-a738050ddfd1/photo-1.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Upland birds and dogs in the cover"
+  },
+  "images.gallery[1] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/08ed003c-1611-4bb2-af19-12c898282d16/IMG_4636.JPG",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Hunters walking Eastern Oregon cover"
+  },
+  "images.gallery[2] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/0965ba13-e397-4474-ac25-9f0537fa997f/FullSizeRender.jpeg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "A successful day afield"
+  },
+  "images.gallery[3] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/0dd6a446-50ce-4b4b-b4ea-eef12c30c0ab/photo.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Bird hunting along the property"
+  },
+  "images.gallery[4] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11aeec3a-7f1e-4896-9f70-ba31f2541f5d/IMG_6137-1536x2048.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Guided hunt in the field"
+  },
+  "images.gallery[5] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/11d4f9d6-ed1b-4408-81f4-50ceebf86de1/BROCHURE+DOG.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Working dog ready for the hunt"
+  },
+  "images.gallery[6] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/2247ab68-5534-4fa8-9605-116e012887e4/IMG_9807.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Horseshoe Curve hunt party"
+  },
+  "images.gallery[7] (hunts)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/347a8e4f-005b-45fb-b66b-3d42321e959d/photo-3.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Birds in hand after the flush"
+  },
+  "images.gallery[8] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/12e7fdc1-4e31-4438-9b90-6d5c4b2da9e1/CONTACT-US_DJI_0659-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Aerial view over the river corridor"
+  },
+  "images.gallery[9] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/14c16904-1f25-40f0-ae3c-4ca6b2a6c7e5/WATERFOWL_DJI_0372-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Property retreats and open country"
+  },
+  "images.gallery[10] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/1505de2f-1bad-451a-8807-a0cfb0cfdc19/RETREATS_DJI_0354-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Aerial look at cultivated and wild cover"
+  },
+  "images.gallery[11] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/3cf32230-a8a0-48d5-a2ba-518ebcc7289e/DJI_0341-2048x1365.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Open farmland on the lodge property"
+  },
+  "images.gallery[12] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/40785260-e223-41b0-8992-670fccb99c59/IMG_5278.jpeg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Deer country along the curve"
+  },
+  "images.gallery[13] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/42d5724e-5ef2-44fc-8b74-80eb89c7922a/horseshoecurvehuntclub9.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Horseshoe Curve hunt club grounds"
+  },
+  "images.gallery[14] (land)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/47a442ba-685c-4415-8fe4-d96105051f9f/horseshoecurvehuntclub17_deer-hunting.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Wide view of the property from above"
+  },
+  "images.gallery[15] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/02c22b64-dc0d-4239-a365-d5de084ca3f7/IMG_5422-1536x2048.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Horseshoe Curve hunt club lodge"
+  },
+  "images.gallery[16] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/10cb4fb1-a762-4b95-931e-131e2888d8c4/IMG_5121-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Lodge interior hospitality"
+  },
+  "images.gallery[17] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/19afa9ab-ba22-4bdd-bce0-91ad56c052b5/IMG_5035-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Comfortable lodge living space"
+  },
+  "images.gallery[18] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/1d1d255e-d425-4c10-ad6a-a22db292a734/IMG_5206-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Well-appointed lodge room"
+  },
+  "images.gallery[19] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/255740a2-b8f5-4dd6-8c5b-181b45f01c68/IMG_5506-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Lodge dining and gathering space"
+  },
+  "images.gallery[20] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/3593534d-091d-4289-b922-2f031f464d61/IMG_5539-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Evening lodging at the property"
+  },
+  "images.gallery[21] (lodging)": {
+    "origin": "https://images.squarespace-cdn.com/content/v1/63dad109de284f2cc8483507/39840cb6-2d44-4c83-9b0c-d63626dab600/IMG_5066-2048x1536.jpg",
+    "page": "https://horseshoecurveoutdoors.com/gallery",
+    "alt": "Lodge atmosphere after the hunt"
+  },
+  "public/images/site/misc/hco-logo.png": {
+    "origin": "https://static1.squarespace.com/static/63dad109de284f2cc8483507/t/6443152ba8de8c482e4b5447/1682117931254/HCO_Final_Logo.png",
+    "page": "https://horseshoecurveoutdoors.com/"
+  }
+}
