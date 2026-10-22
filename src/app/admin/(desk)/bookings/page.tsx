@@ -28,7 +28,14 @@ export default function AdminBookingsPage() {
   }, []);
 
   useEffect(() => {
-    void load();
+    let cancelled = false;
+    // Defer so the initial fetch is not a synchronous setState in the effect.
+    queueMicrotask(() => {
+      if (!cancelled) void load();
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [load]);
 
   async function setStatus(id: string, status: "confirmed" | "cancelled") {
