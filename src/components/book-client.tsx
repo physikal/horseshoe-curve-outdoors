@@ -3,7 +3,7 @@
 import { format } from "date-fns";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -40,10 +40,13 @@ export function BookClient({
     ? Math.min(selected.remaining, selected.hunt.maxGuests)
     : 12;
 
-  useEffect(() => {
-    if (!selected) return;
-    setPartySize((prev) => Math.min(Math.max(1, prev), maxParty));
-  }, [selected, maxParty]);
+  const [trackedMaxParty, setTrackedMaxParty] = useState(maxParty);
+  if (trackedMaxParty !== maxParty) {
+    setTrackedMaxParty(maxParty);
+    if (selected) {
+      setPartySize((prev) => Math.min(Math.max(1, prev), maxParty));
+    }
+  }
 
   const grandTotal = selected
     ? selected.hunt.pricePerGuest * partySize
