@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --brand-forest: #1f3a2a;
+  --brand-forest-deep: #13251b;
+  --brand-moss: #3f5d45;
+  --brand-gold: #c2a15a;
+  --brand-gold-bright: #d4b56a;
+  --brand-cream: #f3efe4;
+  --brand-stone: #d9d1c0;
+  --brand-ink: #1a1714;
+  --brand-field: #6b7d4f;
+
+  --background: #f7f3ea;
+  --foreground: #1a1714;
+  --card: #fffdf8;
+  --card-foreground: #1a1714;
+  --popover: #fffdf8;
+  --popover-foreground: #1a1714;
+  --primary: #1f3a2a;
+  --primary-foreground: #f3efe4;
+  --secondary: #e7e0d1;
+  --secondary-foreground: #1f3a2a;
+  --muted: #ebe4d6;
+  --muted-foreground: #5c564c;
+  --accent: #c2a15a;
+  --accent-foreground: #1a1714;
+  --destructive: oklch(0.55 0.2 25);
+  --border: #d7cebc;
+  --input: #d7cebc;
+  --ring: #3f5d45;
+  --chart-1: #1f3a2a;
+  --chart-2: #c2a15a;
+  --chart-3: #6b7d4f;
+  --chart-4: #3f5d45;
+  --chart-5: #8a6b3a;
+  --radius: 0.45rem;
+  --sidebar: #13251b;
+  --sidebar-foreground: #f3efe4;
+  --sidebar-primary: #c2a15a;
+  --sidebar-primary-foreground: #1a1714;
+  --sidebar-accent: #1f3a2a;
+  --sidebar-accent-foreground: #f3efe4;
+  --sidebar-border: #2a4634;
+  --sidebar-ring: #c2a15a;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(ellipse at top, rgba(194, 161, 90, 0.08), transparent 45%),
+      linear-gradient(180deg, #f7f3ea 0%, #efe8d8 100%);
+    background-attachment: fixed;
+  }
+  html {
+    @apply font-sans;
+  }
+
+  /* Hide platform-injected Vercel Toolbar / feedback widget */
+  vercel-live-feedback,
+  #vercel-live-feedback,
+  [data-vercel-toolbar],
+  [data-vercel-toolbar-rel],
+  iframe[src*="vercel.live"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+  }
+  .hero-veil {
+    background:
+      linear-gradient(
+        105deg,
+        rgba(19, 37, 27, 0.88) 0%,
+        rgba(19, 37, 27, 0.55) 42%,
+        rgba(19, 37, 27, 0.25) 100%
+      ),
+      linear-gradient(to top, rgba(19, 37, 27, 0.75), transparent 40%);
+  }
+  .fade-up {
+    animation: fade-up 0.9s ease both;
+  }
+  .fade-up-delay {
+    animation: fade-up 1s ease 0.15s both;
+  }
+  .fade-up-delay-2 {
+    animation: fade-up 1.05s ease 0.28s both;
+  }
+  .ken-burns {
+    animation: ken-burns 18s ease-out both;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
